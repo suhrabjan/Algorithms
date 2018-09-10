@@ -79,7 +79,3 @@ class maxHeap:
             self.size -= 1
             self.siftDown(0)
         return self.H
-
-
-h = maxHeap()
-print(h.heapSort([1, 2, 3, 4, 9, 8, 7, 6, 5, 4]))
