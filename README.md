@@ -4,7 +4,7 @@
 
 No | Algorithm Name | Python3 Implementation
 :---: | :-----------------------------: | :-----------:
-1 | Heaps (min-heap, max-heap) | [HEAP.py](/blob/master/README.md)
+1 | Heaps (min-heap, max-heap) | [HEAP.py](/blob/master/HEAP.py)
 
 
 ## Instructions
