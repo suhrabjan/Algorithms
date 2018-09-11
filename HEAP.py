@@ -17,7 +17,7 @@ class maxHeap:
         return 2 * i + 2
 
     def siftUp(self, i):
-        while i > 0 and self.size > 0:
+        while i > 0:
             if self.H[i] > self.H[self.parent(i)]:
                 self.H[self.parent(i)], self.H[i] = self.H[i], self.H[self.parent(i)]
                 i = self.parent(i)
