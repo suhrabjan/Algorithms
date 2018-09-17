@@ -9,6 +9,7 @@ class SingleLinkedList:
 
     def __init__(self):
         self.start = None
+        self.length = 0
 
     def display_list(self):
         if self.start is None:
@@ -21,10 +22,14 @@ class SingleLinkedList:
                 p = p.link
             print()
 
+    def __len__(self):
+        return self.length
+
     def insert_in_beginning(self, data):
         temp = Node(data)
         temp.link = self.start
         self.start = temp
+        self.length += 1
 
 
 l = SingleLinkedList()
@@ -34,3 +39,4 @@ l.insert_in_beginning(5)
 l.insert_in_beginning(5)
 l.insert_in_beginning(5)
 l.display_list()
+print(len(l))
