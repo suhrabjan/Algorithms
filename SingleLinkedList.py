@@ -48,6 +48,18 @@ class SingleLinkedList:
         else:
             return "{}, not in the list".format(x)
 
+    # adds a node to the back. O(n)
+    def append(self, data):
+        temp = Node(data)
+        if self.start is None:
+            self.start = temp
+            return
+        p = self.start
+        while p.link is not None:
+            p = p.link
+        p.link = temp
+        self.length += 1
+
 
 l = SingleLinkedList()
 # print(l.start)
@@ -55,6 +67,7 @@ l = SingleLinkedList()
 l.insert_in_beginning(5)
 l.insert_in_beginning(5)
 l.insert_in_beginning(5)
+l.append(25)
 l.display_list()
 print(len(l))
-print(l.search(5))
+print(l.search(25))
