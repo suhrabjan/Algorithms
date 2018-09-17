@@ -60,14 +60,19 @@ class SingleLinkedList:
         p.link = temp
         self.length += 1
 
+    def createList(self, *elements):
+        for elem in elements:
+            self.append(elem)
+
 
 l = SingleLinkedList()
 # print(l.start)
 # print(l.display_list())
-l.insert_in_beginning(5)
-l.insert_in_beginning(5)
-l.insert_in_beginning(5)
-l.append(25)
+# l.appendLeft(5)
+# l.appendLeft(5)
+# l.appendLeft(5)
+# l.append(25)
+l.createList()
 l.display_list()
 print(len(l))
 print(l.search(25))
