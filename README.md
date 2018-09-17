@@ -5,7 +5,7 @@
 No | Algorithm Name | Python3 Implementation
 :---: | :-----------------------------: | :-----------:
 1 | Heaps (min-heap, max-heap) | [HEAP.py](/HEAP.py)
-
+2 | Single Linked List | [SingleLinkedList.py](/SingleLinkedList.py)
 
 ## Instructions
 
@@ -47,3 +47,5 @@ No | Algorithm Name | Python3 Implementation
     h_max.heapSort(A)  <!-- where A is an array (list), heapSort sorts heap structure in place, space complexity O(1), time complexity O(nlogn) -->
     ```
     
+    
+##### 2. Single Linked List.
