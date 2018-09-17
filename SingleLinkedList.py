@@ -53,6 +53,7 @@ class SingleLinkedList:
         temp = Node(data)
         if self.start is None:
             self.start = temp
+            self.length += 1
             return
         p = self.start
         while p.link is not None:
@@ -72,7 +73,7 @@ l = SingleLinkedList()
 # l.appendLeft(5)
 # l.appendLeft(5)
 # l.append(25)
-l.createList()
+l.createList(1, 2)
 l.display_list()
 print(len(l))
 print(l.search(25))
