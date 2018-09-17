@@ -28,7 +28,7 @@ class SingleLinkedList:
         return self.length
 
     # running time: O(1)
-    def insert_in_beginning(self, data):
+    def appendLeft(self, data):
         temp = Node(data)
         temp.link = self.start
         self.start = temp
