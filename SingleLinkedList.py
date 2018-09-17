@@ -14,7 +14,7 @@ class SingleLinkedList:
     # Running time O(n)
     def display_list(self):
         if self.start is None:
-            return 'List is empty'
+            print ('List is empty')
         else:
             print("List is :  ")
             p = self.start
@@ -83,16 +83,46 @@ class SingleLinkedList:
         except AttributeError:
             print("Given position not in list and not available for inserting.")
 
+    # removes the last element and returns it. O(n)
+    def pop(self):
+        if self.start is None:
+            print('List is Empty')
+        elif self.start.link is None:
+            x = self.start.info
+            self.start = None
+            self.length -= 1
+            return x
+        p = self.start
+        while p.link.link is not None:
+            p = p.link
+        x = p.link.info
+        p.link = None
+        self.length -= 1
+        return x
 
-l = SingleLinkedList()
-# print(l.start)
-# print(l.display_list())
-# l.appendLeft(5)
-# l.appendLeft(5)
-# l.appendLeft(5)
-# l.append(25)
-l.createList(1, 2, 3)
-l.insert(5, 2)
-l.display_list()
-print(len(l))
-print(l.search(25))
+    # removes the first element and returns it. O(1)
+    def popLeft(self):
+        if self.start is None:
+            print('List is Empty')
+        else:
+            x = self.start.info
+            self.start = self.start.link
+            self.length -= 1
+            return x
+
+    def remove(self, position):
+        if self.start is None:
+            print('List is Empty')
+        elif self.length <= position:
+            print('Given position not in list and not available for deleting.')
+        elif position == 0:
+            self.start = self.start.link
+            self.length -= 1
+        else:
+            i = 0
+            p = self.start
+            while i < position - 1:
+                p = p.link
+                i += 1
+            p.link = p.link.link
+            self.length -= 1
