@@ -110,6 +110,7 @@ class SingleLinkedList:
             self.length -= 1
             return x
 
+    # removes the element at given position. Finding position take O(n), removal O(1)
     def remove(self, position):
         if self.start is None:
             print('List is Empty')
