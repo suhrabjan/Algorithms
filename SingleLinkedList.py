@@ -61,9 +61,27 @@ class SingleLinkedList:
         p.link = temp
         self.length += 1
 
+    # appends every input and creates list. O(n**2) running time
     def createList(self, *elements):
         for elem in elements:
             self.append(elem)
+
+    # inserts a node at a give position. Inserting O(1) but finding position O(n)
+    def insert(self, data, position):
+        if position == 0:
+            return self.appendLeft(data)
+        try:
+            temp = Node(data)
+            i = 0
+            p = self.start
+            while i < (position - 1):
+                p = p.link
+                i += 1
+            temp.link = p.link
+            p.link = temp
+            self.length += 1
+        except AttributeError:
+            print("Given position not in list and not available for inserting.")
 
 
 l = SingleLinkedList()
@@ -73,7 +91,8 @@ l = SingleLinkedList()
 # l.appendLeft(5)
 # l.appendLeft(5)
 # l.append(25)
-l.createList(1, 2)
+l.createList(1, 2, 3)
+l.insert(5, 2)
 l.display_list()
 print(len(l))
 print(l.search(25))
